@@ -3,6 +3,9 @@
 
 #include <iostream>
 
+namespace Engine
+{
+
 void Texture::load(const char *path)
 {
 	glGenTextures(1, &m_texture);
@@ -40,4 +43,6 @@ void Texture::free()
 Texture::operator GLuint() const
 {
 	return m_texture;
+}
+
 }

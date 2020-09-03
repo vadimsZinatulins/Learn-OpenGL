@@ -171,27 +171,30 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Core.cpp" />
-    <ClCompile Include="glad.c" />
-    <ClCompile Include="InputManager.cpp" />
-    <ClCompile Include="IScene.cpp" />
+    <ClCompile Include="Engine\Core.cpp" />
+    <ClCompile Include="Engine\glad.c" />
+    <ClCompile Include="Engine\InputManager.cpp" />
+    <ClCompile Include="Engine\IScene.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="SceneManager.cpp" />
-    <ClCompile Include="ShaderProgram.cpp" />
-    <ClCompile Include="stb_image.cpp" />
-    <ClCompile Include="Texture.cpp" />
-    <ClCompile Include="VertexBuffer.cpp" />
+    <ClCompile Include="Engine\SceneManager.cpp" />
+    <ClCompile Include="Engine\ShaderProgram.cpp" />
+    <ClCompile Include="Engine\stb_image.cpp" />
+    <ClCompile Include="Engine\Texture.cpp" />
+    <ClCompile Include="Engine\VertexBuffer.cpp" />
+    <ClCompile Include="Shapes\QuadShape.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Core.h" />
-    <ClInclude Include="InputManager.h" />
-    <ClInclude Include="IScene.h" />
-    <ClInclude Include="Keys.h" />
-    <ClInclude Include="SceneManager.h" />
-    <ClInclude Include="ShaderProgram.h" />
-    <ClInclude Include="stb_image.h" />
-    <ClInclude Include="Texture.h" />
-    <ClInclude Include="VertexBuffer.h" />
+    <ClInclude Include="Engine\Core.h" />
+    <ClInclude Include="Engine\InputManager.h" />
+    <ClInclude Include="Engine\IScene.h" />
+    <ClInclude Include="Engine\Keys.h" />
+    <ClInclude Include="Engine\SceneManager.h" />
+    <ClInclude Include="Engine\ShaderProgram.h" />
+    <ClInclude Include="Engine\stb_image.h" />
+    <ClInclude Include="Engine\Texture.h" />
+    <ClInclude Include="Engine\VertexBuffer.h" />
+    <ClInclude Include="Shapes\QuadShape.h" />
+    <ClInclude Include="x64\Game.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

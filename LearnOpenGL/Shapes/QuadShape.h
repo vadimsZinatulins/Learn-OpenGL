@@ -6,8 +6,8 @@
 namespace Shapes
 {
 
-std::vector<float> quadVertices;
-std::vector<float> quadUvs;
+extern std::vector<float> quadVertices;
+extern std::vector<float> quadUvs;
 
 }
 

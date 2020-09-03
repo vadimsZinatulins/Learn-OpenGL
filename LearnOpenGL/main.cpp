@@ -1,3 +1,6 @@
+#include <iostream>
+
+/*
 #include "Core.h"
 #include "IScene.h"
 #include "SceneManager.h"
@@ -9,7 +12,6 @@
 #include <glad/glad.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-#include <iostream>
 #include <vector>
 #include <map>
 
@@ -334,12 +336,17 @@ protected:
 	}
 private:
 };
+*/
 
 int main(int argc, char *argv[])
 {
+	/*
 	Game game;
 
 	game.run();
+	*/
+
+	std::cout << "Hello World!" << std::endl;
 
 	return 0;
 }
