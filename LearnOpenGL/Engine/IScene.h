@@ -1,6 +1,9 @@
 #ifndef __ISCENE_H__
 #define __ISCENE_H__
 
+namespace Engine
+{
+
 class IScene
 {
 public:
@@ -17,5 +20,7 @@ public:
 private:
 	bool m_isRunning;
 };
+
+}
 
 #endif // !__ISCENE_H__

@@ -5,6 +5,9 @@
 
 #include "IScene.h"
 
+namespace Engine
+{
+
 class SceneManager
 {
 public:
@@ -42,6 +45,8 @@ inline void SceneManager::changeScene()
 	}
 	else
 		m_currScene = std::make_unique<T>();
+}
+
 }
 
 #endif // !__SCENE_MANAGER_H__

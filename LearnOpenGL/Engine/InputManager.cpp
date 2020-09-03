@@ -1,5 +1,8 @@
 #include "InputManager.h"
 
+namespace Engine
+{
+
 InputManager InputManager::m_instance;
 
 InputManager &InputManager::getInstance()
@@ -79,4 +82,6 @@ bool InputManager::wasKeyDown(Key key)
 		return false;
 
 	return ptr->second;
+}
+
 }

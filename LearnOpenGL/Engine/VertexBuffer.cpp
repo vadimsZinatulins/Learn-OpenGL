@@ -1,5 +1,8 @@
 #include "VertexBuffer.h"
 
+namespace Engine
+{
+
 VertexBuffer::VertexBuffer() :
 	m_vbo(0)
 {
@@ -43,4 +46,6 @@ void VertexBuffer::bind()
 void VertexBuffer::unbind()
 {
 	glBindVertexArray(0);
+}
+
 }

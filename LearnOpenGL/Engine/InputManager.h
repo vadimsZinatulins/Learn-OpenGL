@@ -5,6 +5,10 @@
 
 #include "Keys.h"
 
+namespace Engine
+{
+
+
 using Keys = std::unordered_map<Key, bool>;
 
 struct MouseCoords
@@ -46,5 +50,7 @@ private:
 	MouseCoords m_mouseCoords;
 	MouseCoords m_mouseCoordsRel;
 };
+
+}
 
 #endif // !__INPUT_MANAGER_H__

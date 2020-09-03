@@ -4,6 +4,9 @@
 #include <vector>
 #include <glad/glad.h>
 
+namespace Engine
+{
+
 class VertexBuffer
 {
 public:
@@ -22,5 +25,7 @@ private:
 
 	std::vector<GLuint> m_buffers;
 };
+
+}
 
 #endif // !__VERTEX_BUFFER_H__

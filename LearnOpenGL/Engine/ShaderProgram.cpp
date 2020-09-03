@@ -5,6 +5,9 @@
 #include <iostream>
 #include <vector>
 
+namespace Engine
+{
+
 ShaderProgram::ShaderProgram() : 
     m_program(0)
 {
@@ -159,4 +162,6 @@ GLint ShaderProgram::getLocation(const char *variable)
     }
 
     return ptr->second;
+}
+
 }

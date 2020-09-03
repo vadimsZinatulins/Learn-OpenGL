@@ -4,6 +4,9 @@
 #include <sdl/SDL.h>
 #include <string>
 
+namespace Engine
+{
+
 class Core
 {
 public:
@@ -24,7 +27,7 @@ private:
 	void close();
 
 	std::string m_title;
-	
+
 	int m_width;
 	int m_height;
 
@@ -33,5 +36,8 @@ private:
 	SDL_Window *m_window;
 	SDL_GLContext m_context;
 };
+
+}
+
 
 #endif // !__CORE_H__

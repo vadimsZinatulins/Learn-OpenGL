@@ -1,5 +1,8 @@
 #include "SceneManager.h"
 
+namespace Engine
+{
+
 SceneManager SceneManager::m_instance;
 
 SceneManager &SceneManager::getInstance()
@@ -47,4 +50,6 @@ SceneManager::SceneManager()
 
 SceneManager::~SceneManager()
 {
+}
+
 }

@@ -3,6 +3,9 @@
 
 #include <glad/glad.h>
 
+namespace Engine
+{
+
 class Texture
 {
 public:
@@ -13,5 +16,7 @@ public:
 private:
 	GLuint m_texture;
 };
+
+}
 
 #endif // !__TEXTURE_H__

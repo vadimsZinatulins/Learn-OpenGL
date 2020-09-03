@@ -6,6 +6,9 @@
 #include <glad/glad.h>
 #include <string>
 
+namespace Engine
+{
+
 class ShaderProgram
 {
 public:
@@ -34,5 +37,7 @@ private:
 	GLuint m_program;
 	std::unordered_map<std::string, GLint> m_locations;
 };
+
+}
 
 #endif // !__SHADER_PROGRAM_H__

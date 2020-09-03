@@ -1,6 +1,9 @@
 #ifndef __KEYS_H__
 #define __KEYS_H__
 
+namespace Engine
+{
+
 using Key = unsigned char;
 
 #define KEY_UNKNOWN 0
@@ -244,5 +247,7 @@ using Key = unsigned char;
 #define KEY_SLEEP 282
 #define KEY_APP1 283
 #define KEY_APP2 284
+
+}
 
 #endif // !__KEYS_H__

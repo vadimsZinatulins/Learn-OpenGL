@@ -1,5 +1,8 @@
 #include "IScene.h"
 
+namespace Engine
+{
+
 IScene::IScene() :
     m_isRunning(true)
 {
@@ -25,4 +28,6 @@ bool IScene::isRunning() const
 void IScene::quit()
 {
     m_isRunning = false;
+}
+
 }

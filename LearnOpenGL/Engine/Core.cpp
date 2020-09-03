@@ -8,6 +8,9 @@
 const Uint32 FPS = 60;
 const Uint32 MIN_TICKS_PER_FRAME = 1000 / FPS;
 
+namespace Engine
+{
+
 Core::Core() :
 	m_title("Open GL"),
 	m_width(1024),
@@ -167,4 +170,6 @@ void Core::close()
 	}
 
 	SDL_Quit();
+}
+
 }
