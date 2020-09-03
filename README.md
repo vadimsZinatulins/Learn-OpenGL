@@ -14,5 +14,5 @@ This part is where `Engine` stuff is used to create several Scenes where each sc
 This project relies on:
 - [SDL2](https://www.libsdl.org/download-2.0.php) (to manage windowing stuff)
 - [glm ](https://github.com/g-truc/glm) (does all the maths)
-- [glad](https://glad.dav1d.de/) (retries and stores all OpenGL functions)
+- [glad](https://glad.dav1d.de/) (retrieves and stores all OpenGL functions)
 - [stb](https://github.com/nothings/stb) (loads all images for me)
