@@ -4,9 +4,13 @@
 #include <sstream>
 #include <iostream>
 #include <vector>
+#include <glm/gtc/matrix_transform.hpp>
 
 namespace Engine
 {
+
+int ShaderProgram::m_width = 1024;
+int ShaderProgram::m_height= 768;
 
 ShaderProgram::ShaderProgram() : 
     m_program(0)
@@ -81,6 +85,17 @@ void ShaderProgram::set(const char *var, glm::vec4 &value)
 void ShaderProgram::set(const char *var, glm::mat4 &value)
 {
     glUniformMatrix4fv(getLocation(var), 1, GL_FALSE, &value[0][0]);
+}
+
+void ShaderProgram::setRes(int width, int height)
+{
+    m_width = width;
+    m_height = height;
+}
+
+glm::mat4 ShaderProgram::genProjection(float angle)
+{
+    return glm::perspective(glm::radians(angle), (float)m_width / (float)m_height, 0.1f, 1000.0f);
 }
 
 GLuint ShaderProgram::createShader(const char *filePath, GLenum type)

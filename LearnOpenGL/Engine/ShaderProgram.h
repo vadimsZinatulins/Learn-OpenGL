@@ -28,11 +28,17 @@ public:
 	void set(const char *var, glm::vec3 &value);
 	void set(const char *var, glm::vec4 &value);
 	void set(const char *var, glm::mat4 &value);
+
+	static void setRes(int width, int height);
+	static glm::mat4 genProjection(float angle);
 private:
 	GLuint createShader(const char *filePath, GLenum type);
 	void linkProgram(GLuint vertexShader, GLuint fragmentShader);
 	void detachAndCleanShaders(GLuint vertexShader, GLuint fragmentShader);
 	GLint getLocation(const char *variable);
+
+	static int m_width;
+	static int m_height;
 
 	GLuint m_program;
 	std::unordered_map<std::string, GLint> m_locations;

@@ -171,6 +171,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Engine\Camera.cpp" />
     <ClCompile Include="Engine\Core.cpp" />
     <ClCompile Include="Engine\glad.c" />
     <ClCompile Include="Engine\InputManager.cpp" />
@@ -185,11 +186,13 @@
     <ClCompile Include="Scenes\Scene_1.cpp" />
     <ClCompile Include="Scenes\Scene_2.cpp" />
     <ClCompile Include="Scenes\Scene_3.cpp" />
+    <ClCompile Include="Scenes\Scene_4.cpp" />
     <ClCompile Include="Shapes\QuadShape.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Shapes\TriangleShape.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Engine\Camera.h" />
     <ClInclude Include="Engine\Core.h" />
     <ClInclude Include="Engine\InputManager.h" />
     <ClInclude Include="Engine\IScene.h" />
@@ -198,11 +201,13 @@
     <ClInclude Include="Engine\ShaderProgram.h" />
     <ClInclude Include="Engine\stb_image.h" />
     <ClInclude Include="Engine\Texture.h" />
+    <ClInclude Include="Engine\Transform.h" />
     <ClInclude Include="Engine\VertexBuffer.h" />
     <ClInclude Include="Scenes\SceneTests.h" />
     <ClInclude Include="Scenes\Scene_1.h" />
     <ClInclude Include="Scenes\Scene_2.h" />
     <ClInclude Include="Scenes\Scene_3.h" />
+    <ClInclude Include="Scenes\Scene_4.h" />
     <ClInclude Include="Shapes\QuadShape.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Shapes\TriangleShape.h" />

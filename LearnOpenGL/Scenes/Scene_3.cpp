@@ -3,6 +3,7 @@
 #include "../Engine/InputManager.h"
 #include "../Engine/SceneManager.h"
 #include "Scene_2.h"
+#include "Scene_4.h"
 
 void Scene_3::update(float deltaTime)
 {
@@ -24,6 +25,9 @@ void Scene_3::update(float deltaTime)
 
 	if(input.isKeyPressed(KEY_LEFT))
 		Engine::SceneManager::getInstance().changeScene<Scene_2>();
+
+	if(input.isKeyPressed(KEY_RIGHT))
+		Engine::SceneManager::getInstance().changeScene<Scene_4>();
 }
 
 void Scene_3::onEnter()
