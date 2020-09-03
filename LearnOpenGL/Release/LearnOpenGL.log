@@ -1,0 +1,19 @@
+﻿  Core.cpp
+  main.cpp
+  stb_image.cpp
+  glad.c
+Core.obj : error LNK2001: unresolved external symbol _SDL_SetWindowSize
+Core.obj : error LNK2001: unresolved external symbol _SDL_GL_SwapWindow
+Core.obj : error LNK2001: unresolved external symbol _SDL_GL_DeleteContext
+Core.obj : error LNK2001: unresolved external symbol _SDL_Init
+Core.obj : error LNK2001: unresolved external symbol _SDL_DestroyWindow
+Core.obj : error LNK2001: unresolved external symbol _SDL_Quit
+Core.obj : error LNK2001: unresolved external symbol _SDL_GL_SetAttribute
+Core.obj : error LNK2001: unresolved external symbol _SDL_GL_CreateContext
+Core.obj : error LNK2001: unresolved external symbol _SDL_PollEvent
+Core.obj : error LNK2001: unresolved external symbol _SDL_GL_SetSwapInterval
+Core.obj : error LNK2001: unresolved external symbol _SDL_CreateWindow
+Core.obj : error LNK2001: unresolved external symbol _SDL_SetWindowTitle
+Core.obj : error LNK2001: unresolved external symbol _SDL_SetWindowFullscreen
+MSVCRT.lib(exe_main.obj) : error LNK2001: unresolved external symbol _main
+C:\Users\vadim\source\repos\LearnOpenGL\Release\LearnOpenGL.exe : fatal error LNK1120: 14 unresolved externals
