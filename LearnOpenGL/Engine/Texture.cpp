@@ -45,4 +45,10 @@ Texture::operator GLuint() const
 	return m_texture;
 }
 
+void Texture::bind(unsigned char index)
+{
+	glActiveTexture(GL_TEXTURE0 + index);
+	glBindTexture(GL_TEXTURE_2D, m_texture);
+}
+
 }

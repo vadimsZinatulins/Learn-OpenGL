@@ -13,6 +13,8 @@ public:
 	void free();
 
 	operator GLuint() const;
+
+	void bind(unsigned char index);
 private:
 	GLuint m_texture;
 };
