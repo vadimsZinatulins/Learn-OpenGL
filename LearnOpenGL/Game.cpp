@@ -1,5 +1,5 @@
 #include "Game.h"
-#include "SceneTests.h"
+#include "Scenes/SceneTests.h"
 #include "Engine/SceneManager.h"
 
 void Game::startup()
