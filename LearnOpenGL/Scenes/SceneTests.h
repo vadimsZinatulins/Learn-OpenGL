@@ -1,10 +1,10 @@
 #ifndef __SCENE_TESTS_H__
 #define __SCENE_TESTS_H__
 
-#include "Engine/IScene.h"
-#include "Engine/Texture.h"
-#include "Engine/ShaderProgram.h"
-#include "Engine/VertexBuffer.h"
+#include "../Engine/IScene.h"
+#include "../Engine/Texture.h"
+#include "../Engine/ShaderProgram.h"
+#include "../Engine/VertexBuffer.h"
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>

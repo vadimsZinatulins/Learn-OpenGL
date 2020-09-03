@@ -181,9 +181,11 @@
     <ClCompile Include="Engine\stb_image.cpp" />
     <ClCompile Include="Engine\Texture.cpp" />
     <ClCompile Include="Engine\VertexBuffer.cpp" />
-    <ClCompile Include="SceneTests.cpp" />
+    <ClCompile Include="Scenes\SceneTests.cpp" />
+    <ClCompile Include="Scenes\Scene_1.cpp" />
     <ClCompile Include="Shapes\QuadShape.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Shapes\TriangleShape.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Core.h" />
@@ -195,9 +197,11 @@
     <ClInclude Include="Engine\stb_image.h" />
     <ClInclude Include="Engine\Texture.h" />
     <ClInclude Include="Engine\VertexBuffer.h" />
-    <ClInclude Include="SceneTests.h" />
+    <ClInclude Include="Scenes\SceneTests.h" />
+    <ClInclude Include="Scenes\Scene_1.h" />
     <ClInclude Include="Shapes\QuadShape.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Shapes\TriangleShape.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
