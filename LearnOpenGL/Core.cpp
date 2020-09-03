@@ -8,8 +8,6 @@
 const Uint32 FPS = 60;
 const Uint32 MIN_TICKS_PER_FRAME = 1000 / FPS;
 
-#define LOG(text) std::cout << text << std::endl
-
 Core::Core() :
 	m_title("Open GL"),
 	m_width(1024),
@@ -71,28 +69,20 @@ void Core::setFullScreen(bool fullScreenFlag)
 
 void Core::init()
 {
-	LOG("Init()");
-
 	SDL_Init(SDL_INIT_EVERYTHING);
-	LOG("SDL INITIALIZED");
 
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 	//SDL_GL_SetAttribute(SDL_GL_STENCIL_SIZE, 8);
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
-	LOG("SDL GL Attributes set");
 
 	SDL_GL_SetSwapInterval(1);
-	LOG("SDL GL swap interval set");
 
 	m_window = SDL_CreateWindow(m_title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, m_width, m_height, SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL | (m_isFullScreen ? SDL_WINDOW_FULLSCREEN : 0));
-	LOG("SDL Window Created");
 	m_context = SDL_GL_CreateContext(m_window);
-	LOG("SDL GL Context Created");
 
 	gladLoadGLLoader((GLADloadproc)SDL_GL_GetProcAddress);
-	LOG("GLAD Loaded");
 
 	glViewport(0, 0, m_width, m_height);
 	glClearColor(0.2f, 0.3f, 0.4f, 1.0f);
@@ -100,10 +90,8 @@ void Core::init()
 	glEnable(GL_CULL_FACE);
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-	LOG("Some properties set");
 
 	SDL_SetRelativeMouseMode(SDL_TRUE);
-	LOG("Relative mouse mode set");
 }
 
 void Core::loop()
@@ -114,7 +102,6 @@ void Core::loop()
 	SceneManager &scene = SceneManager::getInstance();
 
 	startup();
-	LOG("Startup Called");
 
 	Uint32 currentFrameTicks = SDL_GetTicks();
 	Uint32 lastFrameTicks = SDL_GetTicks();
@@ -159,10 +146,8 @@ void Core::loop()
 		if(frameTicks < MIN_TICKS_PER_FRAME)
 			SDL_Delay(MIN_TICKS_PER_FRAME - frameTicks);
 	}
-	LOG("exiting");
 
 	scene.shutdown();
-	LOG("Shutdown called");
 
 	shutdown();
 }
@@ -173,16 +158,12 @@ void Core::close()
 	{
 		SDL_GL_DeleteContext(m_context);
 		m_context = nullptr;
-
-		LOG("SDL GL Context Deleted");
 	}
 
 	if(m_window)
 	{
 		SDL_DestroyWindow(m_window);
 		m_window = nullptr;
-
-		LOG("SDL Window deleted");
 	}
 
 	SDL_Quit();

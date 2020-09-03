@@ -13,8 +13,6 @@
 #include <vector>
 #include <map>
 
-#define LOG(text) std::cout << text << std::endl
-
 struct Camera
 {
 	glm::vec3 position{ glm::vec3{ 0.0f, 2.0f,  3.0f } };
@@ -245,41 +243,30 @@ public:
 			0.0f, 1.0f
 		};
 
-		LOG("Initializing Simple Shader");
 		m_simpleShader.loadShaders("resources/shaders/simpleShader.vert", "resources/shaders/simpleShader.frag");
 		m_simpleShader.use();
 		m_simpleShader.set("projection", projection);
 		m_simpleShader.unuse();
-		LOG("Simple Shader initialized");
-
 
 		m_marbleTexture.load("resources/textures/marble.jpg");
-		LOG("Marble Texture Loaded");
 
 		m_metalTexture.load("resources/textures/metal.jpg");
-		LOG("Meta Texture Loaded");
 
 		m_grassTexture.load("resources/textures/grass.png");
-		LOG("Grass Texture Loaded");
 
 		m_windowTexture.load("resources/textures/window.png");
-		LOG("Window Texture Loaded");
 
-		LOG("Initializing Cube vertex Shader");
 		m_cubeVertexBuffer.init();
 		m_cubeVertexBuffer.bind();
 		m_cubeVertexBuffer.addAttribute(cubeVertices, 3);
 		m_cubeVertexBuffer.addAttribute(cubeUVs, 2);
 		m_cubeVertexBuffer.unbind();
-		LOG("Cube vertex Shader initialized");
 
-		LOG("Initializing Plnae vertex Shader");
 		m_planeVertexBuffer.init();
 		m_planeVertexBuffer.bind();
 		m_planeVertexBuffer.addAttribute(planeVertices, 3);
 		m_planeVertexBuffer.addAttribute(planeUVs, 2);
 		m_planeVertexBuffer.unbind();
-		LOG("Plane vertex Shader initialized");
 
 		m_cube1.position = { 1.2f, 0.5f, 0.0f };
 		m_cube2.position = { -1.2f, 0.5f, 0.0f };
