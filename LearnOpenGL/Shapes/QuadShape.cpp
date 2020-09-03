@@ -1,0 +1,24 @@
+#include "QuadShape.h"
+
+namespace Shapes
+{
+
+extern std::vector<float> quadVertices = {
+	-0.5f, 0.0f, -0.5f,
+	-0.5f, 0.0f,  0.5f,
+	 0.5f, 0.0f,  0.5f,
+	 0.5f, 0.0f,  0.5f,
+	 0.5f, 0.0f, -0.5f,
+	-0.5f, 0.0f, -0.5f
+};
+
+extern std::vector<float> quadUvs = {
+	0.0f, 1.0f,
+	0.0f, 0.0f,
+	1.0f, 0.0f,
+	1.0f, 0.0f,
+	1.0f, 1.0f,
+	0.0f, 1.0f
+};
+
+}
