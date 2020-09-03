@@ -1,23 +1,22 @@
 #include "Scene_4.h"
-#include "../Shapes/QuadShape.h"
+#include "../Shapes/CubeShape.h"
 #include "../Engine/InputManager.h"
 #include "../Engine/SceneManager.h"
+#include "../Engine/Random.h"
 #include "Scene_3.h"
 
 void Scene_4::update(float deltaTime)
 {
 	Engine::InputManager &input = Engine::InputManager::getInstance();
-	
+
 	m_camera.update(deltaTime);
 
 	glm::mat4 view = m_camera.getView();
-	glm::mat4 quadModel = m_quad.genModelMatrix();
 
 	m_shader.use();
 	m_vao.bind();
 
 	m_shader.set("view", view);
-	m_shader.set("model", quadModel);
 
 	m_texture1.bind(0);
 	m_shader.set("tex1", 0);
@@ -25,7 +24,13 @@ void Scene_4::update(float deltaTime)
 	m_texture2.bind(1);
 	m_shader.set("tex2", 1);
 
-	glDrawArrays(GL_TRIANGLES, 0, 6);
+	for(int i = 0; i < NUM_QUADS; i++)
+	{
+		glm::mat4 quadModel = m_quads[i].genModelMatrix();
+		m_shader.set("model", quadModel);
+
+		glDrawArrays(GL_TRIANGLES, 0, 36);
+	}
 
 	m_vao.unbind();
 	m_shader.unuse();
@@ -48,9 +53,23 @@ void Scene_4::onEnter()
 
 	m_vao.init();
 	m_vao.bind();
-	m_vao.addAttribute(Shapes::quadVertices, 3);
-	m_vao.addAttribute(Shapes::quadUvs, 2);
+	m_vao.addAttribute(Shapes::cubeVertices, 3);
+	m_vao.addAttribute(Shapes::cubeUvs, 2);
 	m_vao.unbind();
+
+	Engine::Random random;
+
+	for(int i = 0; i < NUM_QUADS; i++)
+	{
+		glm::vec3 pos = { random.nextDouble(-5, 5), random.nextDouble(-2, 2), random.nextDouble(-4, 4) };
+		glm::vec3 rot = { random.nextDouble(0, 360), random.nextDouble(0, 360), random.nextDouble(0, 360) };
+
+		float scale = random.nextDouble(0.2, 2);
+
+		m_quads[i].position = pos;
+		m_quads[i].rotation = rot;
+		m_quads[i].scale = { scale, scale, scale };
+	}
 }
 
 void Scene_4::onExit()

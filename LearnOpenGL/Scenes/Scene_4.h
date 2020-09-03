@@ -8,6 +8,8 @@
 #include "../Engine/Camera.h"
 #include "../Engine/Transform.h"
 
+#define NUM_QUADS 8
+
 class Scene_4 : public Engine::IScene
 {
 public:
@@ -24,7 +26,7 @@ private:
 
 	Engine::Camera m_camera;
 
-	Engine::Transform m_quad;
+	Engine::Transform m_quads[NUM_QUADS];
 };
 
 #endif // !__SCENE_4_H__

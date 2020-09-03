@@ -9,6 +9,9 @@ Random::Random() : Random(std::_Random_device())
 
 Random::Random(uint_least32_t seed)
 {
+    m_randomNumberGenerator = std::mt19937(seed);
+
+    m_realDistribution = std::uniform_real_distribution<double>();
 }
 
 int Random::next()
