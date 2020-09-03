@@ -10,6 +10,10 @@ Here are all parts that are considered helper stuff and can be reused in `Applic
 ## Application
 This part is where `Engine` stuff is used to create several Scenes where each scene represents a chapter from [https://learnopengl.com/](https://learnopengl.com/)
 
+Every scene is my own implementation of the chapter, so you might find the code different from what is presented in [Learn OpenGL](https://learnopengl.com/).
+
+Use left arrow key and right arrow key to walk through the scenes.
+
 # Dependencies
 This project relies on:
 - [SDL2](https://www.libsdl.org/download-2.0.php) (to manage windowing stuff)
