@@ -7,7 +7,7 @@ SceneManager SceneManager::m_instance;
 
 SceneManager &SceneManager::getInstance()
 {
-    return m_instance;
+	return m_instance;
 }
 
 void SceneManager::update(float deltaTime)
@@ -26,7 +26,11 @@ void SceneManager::update(float deltaTime)
 
 bool SceneManager::isRunning() const
 {
-	return m_currScene->isRunning();
+	// If scene exists, then get its 'isRunning' value
+	if(m_currScene)
+		return m_currScene->isRunning();
+
+	return false;
 }
 
 void SceneManager::quit()
@@ -36,12 +40,15 @@ void SceneManager::quit()
 
 void SceneManager::startup()
 {
-	m_currScene->onEnter();
+	// Initialize Scene only if it exists
+	if(m_currScene)
+		m_currScene->onEnter();
 }
 
 void SceneManager::shutdown()
 {
-	m_currScene->onExit();
+	if(m_currScene)
+		m_currScene->onExit();
 }
 
 SceneManager::SceneManager()

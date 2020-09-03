@@ -1,5 +1,3 @@
-#include <iostream>
-
 /*
 #include "Core.h"
 #include "IScene.h"
@@ -338,15 +336,13 @@ private:
 };
 */
 
+#include "Game.h"
+
 int main(int argc, char *argv[])
 {
-	/*
 	Game game;
 
 	game.run();
-	*/
-
-	std::cout << "Hello World!" << std::endl;
 
 	return 0;
 }

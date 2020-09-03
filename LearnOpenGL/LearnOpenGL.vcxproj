@@ -182,6 +182,7 @@
     <ClCompile Include="Engine\Texture.cpp" />
     <ClCompile Include="Engine\VertexBuffer.cpp" />
     <ClCompile Include="Shapes\QuadShape.cpp" />
+    <ClCompile Include="Game.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Core.h" />
@@ -194,7 +195,7 @@
     <ClInclude Include="Engine\Texture.h" />
     <ClInclude Include="Engine\VertexBuffer.h" />
     <ClInclude Include="Shapes\QuadShape.h" />
-    <ClInclude Include="x64\Game.h" />
+    <ClInclude Include="Game.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
