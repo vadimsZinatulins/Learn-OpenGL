@@ -16,3 +16,6 @@ This project relies on:
 - [glm ](https://github.com/g-truc/glm) (does all the maths)
 - [glad](https://glad.dav1d.de/) (retrieves and stores all OpenGL functions)
 - [stb](https://github.com/nothings/stb) (loads all images for me)
+
+# How to Compile it?
+Just open the project in Visual Studio (VS19 is prefered) and hit that build and run button :)
