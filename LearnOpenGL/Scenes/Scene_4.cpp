@@ -4,6 +4,7 @@
 #include "../Engine/SceneManager.h"
 #include "../Engine/Random.h"
 #include "Scene_3.h"
+#include "Scene_5.h"
 
 void Scene_4::update(float deltaTime)
 {
@@ -37,6 +38,9 @@ void Scene_4::update(float deltaTime)
 
 	if(input.isKeyPressed(KEY_LEFT))
 		Engine::SceneManager::getInstance().changeScene<Scene_3>();
+
+	if(input.isKeyPressed(KEY_RIGHT))
+		Engine::SceneManager::getInstance().changeScene<Scene_5>();
 }
 
 void Scene_4::onEnter()
