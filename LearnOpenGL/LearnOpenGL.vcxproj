@@ -181,6 +181,7 @@
     <ClCompile Include="Engine\stb_image.cpp" />
     <ClCompile Include="Engine\Texture.cpp" />
     <ClCompile Include="Engine\VertexBuffer.cpp" />
+    <ClCompile Include="SceneTests.cpp" />
     <ClCompile Include="Shapes\QuadShape.cpp" />
     <ClCompile Include="Game.cpp" />
   </ItemGroup>
@@ -194,6 +195,7 @@
     <ClInclude Include="Engine\stb_image.h" />
     <ClInclude Include="Engine\Texture.h" />
     <ClInclude Include="Engine\VertexBuffer.h" />
+    <ClInclude Include="SceneTests.h" />
     <ClInclude Include="Shapes\QuadShape.h" />
     <ClInclude Include="Game.h" />
   </ItemGroup>
