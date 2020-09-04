@@ -25,9 +25,9 @@ void Scene_4::update(float deltaTime)
 	m_texture2.bind(1);
 	m_shader.set("tex2", 1);
 
-	for(int i = 0; i < NUM_QUADS; i++)
+	for(int i = 0; i < NUM_CUBES_SCENE_4; i++)
 	{
-		glm::mat4 quadModel = m_quads[i].genModelMatrix();
+		glm::mat4 quadModel = m_cubes[i].genModelMatrix();
 		m_shader.set("model", quadModel);
 
 		glDrawArrays(GL_TRIANGLES, 0, 36);
@@ -63,16 +63,16 @@ void Scene_4::onEnter()
 
 	Engine::Random random;
 
-	for(int i = 0; i < NUM_QUADS; i++)
+	for(int i = 0; i < NUM_CUBES_SCENE_4; i++)
 	{
 		glm::vec3 pos = { random.nextDouble(-5, 5), random.nextDouble(-2, 2), random.nextDouble(-4, 4) };
 		glm::vec3 rot = { random.nextDouble(0, 360), random.nextDouble(0, 360), random.nextDouble(0, 360) };
 
 		float scale = random.nextDouble(0.2, 2);
 
-		m_quads[i].position = pos;
-		m_quads[i].rotation = rot;
-		m_quads[i].scale = { scale, scale, scale };
+		m_cubes[i].position = pos;
+		m_cubes[i].rotation = rot;
+		m_cubes[i].scale = { scale, scale, scale };
 	}
 }
 

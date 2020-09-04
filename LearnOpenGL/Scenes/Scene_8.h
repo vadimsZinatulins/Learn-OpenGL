@@ -49,4 +49,4 @@ private:
 	LightMaterial m_lightMaterial;
 };
 
-#endif // !__SCENE_6_H__
+#endif // !__SCENE_8_H__
