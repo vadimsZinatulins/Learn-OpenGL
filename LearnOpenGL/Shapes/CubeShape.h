@@ -7,6 +7,7 @@ namespace Shapes
 {
 
 extern std::vector<float> cubeVertices;
+extern std::vector<float> cubeNormals;
 extern std::vector<float> cubeUvs;
 
 }

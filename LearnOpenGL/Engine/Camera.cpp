@@ -31,3 +31,13 @@ void Engine::Camera::update(float deltaTime)
 	position += input.isKeyDown(KEY_W) * speed * front + input.isKeyDown(KEY_S) * speed * front * -1.0f;
 	position += input.isKeyDown(KEY_D) * speed * glm::normalize(glm::cross(front, up)) + input.isKeyDown(KEY_A) * speed * glm::normalize(glm::cross(up, front));
 }
+
+void Engine::Camera::reset()
+{
+	position = { glm::vec3{ 0.0f, 2.0f,  3.0f } };
+	front = { glm::vec3{ 0.0f, 0.0f, -1.0f } };
+	up = { glm::vec3{ 0.0f, 1.0f,  0.0f } };
+
+	yaw = { -90.0f };
+	pitch = { -25.0f };
+}
