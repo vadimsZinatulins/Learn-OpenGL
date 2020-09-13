@@ -71,8 +71,8 @@ void Scene_9::onEnter()
 	m_lightMaterial.linear = 0.09f;
 	m_lightMaterial.quadratic = 0.032f;
 
-	m_cubeMaterial.diffuse.load("resources/scene_8/textures/container2.png");
-	m_cubeMaterial.specular.load("resources/scene_8/textures/container2_specular.png");
+	m_cubeMaterial.diffuse.load("resources/scene_9/textures/container2.png");
+	m_cubeMaterial.specular.load("resources/scene_9/textures/container2_specular.png");
 	m_cubeMaterial.shininess = 32.0f;
 
 	glm::mat4 projection = Engine::ShaderProgram::genProjection(45.0f);
