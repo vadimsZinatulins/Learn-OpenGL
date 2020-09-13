@@ -1,12 +1,11 @@
-#include "Scene_9.h"
+#include "Scene_10.h"
 #include "../Shapes/CubeShape.h"
 #include "../Engine/InputManager.h"
 #include "../Engine/SceneManager.h"
 #include "../Engine/Random.h"
-#include "Scene_8.h"
-#include "Scene_10.h"
+#include "Scene_9.h"
 
-void Scene_9::update(float deltaTime)
+void Scene_10::update(float deltaTime)
 {
 	Engine::InputManager &input = Engine::InputManager::getInstance();
 
@@ -34,7 +33,7 @@ void Scene_9::update(float deltaTime)
 	m_cubeShader.set("viewPosition", m_camera.position);
 	m_cubeShader.set("light.position", m_light.position);
 
-	for(int i = 0; i < NUM_CUBES_SCENE_9; i++)
+	for(int i = 0; i < NUM_CUBES_SCENE_10; i++)
 	{
 		glm::mat4 cubeModel = m_cubes[i].genModelMatrix();
 		m_cubeShader.set("model", cubeModel);
@@ -47,18 +46,15 @@ void Scene_9::update(float deltaTime)
 	m_cubeShader.unuse();
 
 	m_vao.unbind();
-
+	
 	if(input.isKeyPressed(KEY_LEFT))
-		Engine::SceneManager::getInstance().changeScene<Scene_8>();
-
-	if(input.isKeyPressed(KEY_RIGHT))
-		Engine::SceneManager::getInstance().changeScene<Scene_10>();
+		Engine::SceneManager::getInstance().changeScene<Scene_9>();
 
 	if(input.isKeyPressed(KEY_R))
 		m_camera.reset();
 }
 
-void Scene_9::onEnter()
+void Scene_10::onEnter()
 {
 	glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 
@@ -77,13 +73,13 @@ void Scene_9::onEnter()
 
 	glm::mat4 projection = Engine::ShaderProgram::genProjection(45.0f);
 
-	m_lightShader.loadShaders("resources/scene_9/shaders/lightShader.vert", "resources/scene_9/shaders/lightShader.frag");
+	m_lightShader.loadShaders("resources/scene_10/shaders/lightShader.vert", "resources/scene_10/shaders/lightShader.frag");
 	m_lightShader.use();
 	m_lightShader.set("projection", projection);
 	m_lightShader.set("lightColor", m_lightMaterial.specular);
 	m_lightShader.unuse();
 
-	m_cubeShader.loadShaders("resources/scene_9/shaders/cubeShader.vert", "resources/scene_9/shaders/cubeShader.frag");
+	m_cubeShader.loadShaders("resources/scene_10/shaders/cubeShader.vert", "resources/scene_10/shaders/cubeShader.frag");
 	m_cubeShader.use();
 	m_cubeShader.set("projection", projection);
 	m_cubeShader.set("material.diffuse", 0);
@@ -106,7 +102,7 @@ void Scene_9::onEnter()
 
 	Engine::Random random;
 
-	for(int i = 0; i < NUM_CUBES_SCENE_9; i++)
+	for(int i = 0; i < NUM_CUBES_SCENE_10; i++)
 	{
 		glm::vec3 pos = { random.nextDouble(-5, 5), random.nextDouble(-2, 2), random.nextDouble(-4, 4) };
 		glm::vec3 rot = { random.nextDouble(0, 360), random.nextDouble(0, 360), random.nextDouble(0, 360) };
@@ -119,7 +115,7 @@ void Scene_9::onEnter()
 	}
 }
 
-void Scene_9::onExit()
+void Scene_10::onExit()
 {
 	m_lightShader.free();
 	m_cubeShader.free();
