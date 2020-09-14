@@ -34,6 +34,9 @@ private:
 		glm::vec3 ambient;
 		glm::vec3 diffuse;
 		glm::vec3 specular;
+		
+		float innerCutOff;
+		float outerCutOff;
 
 		float constant;
 		float linear;
@@ -41,14 +44,12 @@ private:
 	};
 
 	Engine::ShaderProgram m_cubeShader;
-	Engine::ShaderProgram m_lightShader;
 
 	Engine::VertexBuffer m_vao;
 
 	Engine::Camera m_camera;
 
 	Engine::Transform m_cubes[NUM_CUBES_SCENE_10];
-	Engine::Transform m_light;
 
 	Material m_cubeMaterial;
 
