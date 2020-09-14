@@ -32,7 +32,6 @@ void Scene_7::update(float deltaTime)
 
 	m_lightShader.unuse();
 
-
 	m_cubeShader.use();
 	glm::mat4 cubeModel = m_cube.genModelMatrix();
 

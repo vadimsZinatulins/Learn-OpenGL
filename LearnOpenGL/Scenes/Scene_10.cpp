@@ -33,8 +33,6 @@ void Scene_10::update(float deltaTime)
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 	}
 
-	glDrawArrays(GL_TRIANGLES, 0, 36);
-
 	m_cubeShader.unuse();
 
 	m_vao.unbind();
